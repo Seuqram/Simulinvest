@@ -9,9 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
+    
+    
 
     @IBOutlet weak var saldoInicialTextField: UITextField!
     @IBOutlet weak var aporteMensalTextField: UITextField!
+    @IBOutlet weak var periodoTextField: UITextField!
+    //var textFields : [UITextField] = [saldoInicialTextField, aporteMensalTextField]
+    @IBOutlet weak var sinalization: UILabel!
+    
+    @IBAction func patati(_ sender: Any) {
+        if (isFieldEmpty(sender: saldoInicialTextField) && isFieldEmpty(sender: aporteMensalTextField)){
+            let alert = UIAlertController(title: "Alert", message: "Preencha pelo menos saldo inicial ou aporte mensal", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Fechar", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        if isFieldEmpty(sender: periodoTextField){
+            let alert = UIAlertController(title: "Alert", message: "Preencha o período", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Fechar", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
+    }
     
     let numberFormatter = NumberFormatter()
 
@@ -63,12 +83,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    func yourNameFunction(sender: UITextField) {
-        if (sender.text?.isEmpty)! {
-            // textfield is empty
-        } else {
-            // text field is not empty
-        }
+    func isFieldEmpty(sender: UITextField) -> Bool {
+        return (sender.text?.isEmpty)!
     }
 }
 
