@@ -11,12 +11,14 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var saldoInicialTextField: UITextField!
+    @IBOutlet weak var aporteMensalTextField: UITextField!
     
     let numberFormatter = NumberFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         saldoInicialTextField!.delegate = self
+        aporteMensalTextField!.delegate = self
         numberFormatter.numberStyle = .decimal
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.maximumFractionDigits = 2
@@ -59,6 +61,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let finalString = numberFormatter.string(from: doubleFromString as NSNumber)
         textField.text = finalString
         return false
+    }
+    
+    func yourNameFunction(sender: UITextField) {
+        if (sender.text?.isEmpty)! {
+            // textfield is empty
+        } else {
+            // text field is not empty
+        }
     }
 }
 
