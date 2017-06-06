@@ -1,15 +1,14 @@
 //
-//  SimulinvestTests.swift
-//  SimulinvestTests
+//  CalculadoraTeste.swift
+//  Simulinvest
 //
-//  Created by LAB CCET on 31/05/17.
+//  Created by LAB CCET on 05/06/17.
 //  Copyright © 2017 Patati. All rights reserved.
 //
 
 import XCTest
-import Simulinvest
 
-class SimulinvestTests: XCTestCase {
+class CalculadoraTeste: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -31,11 +30,6 @@ class SimulinvestTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
-    }
-    
-    func testCalculaInvestment(){
-        let setup = Investment(saldoInicial: 10.0, aporteMensal: 1.0, periodo: 2, tributavel: false, taxa: 0.1)
-        XCTAssertEqual(setup.calculateInvestment(), 14.41)
     }
     
 }

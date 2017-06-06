@@ -17,6 +17,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var periodoTextField: UITextField!
     //var textFields : [UITextField] = [saldoInicialTextField, aporteMensalTextField]
     @IBOutlet weak var sinalization: UILabel!
+    @IBAction func simularButton(_ sender: Any) {
+        
+    }
     
     @IBAction func patati(_ sender: Any) {
         if (isFieldEmpty(sender: saldoInicialTextField) && isFieldEmpty(sender: aporteMensalTextField)){
@@ -29,6 +32,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "Fechar", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+        
+        let poupanca = Investment(
+            saldoInicial: Double(saldoInicialTextField.text!)!,
+            aporteMensal: Double(aporteMensalTextField.text!)!,
+            periodo: Int(periodoTextField.text!)!,
+            tributavel: false,
+            taxa: 0.1)
+        var b : String
+        b = String(format:"%f", poupanca.calculateInvestment())
+        
+        let alert = UIAlertController(title: "Alert", message: b, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Fechar", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
         
         
     }
@@ -85,6 +101,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func isFieldEmpty(sender: UITextField) -> Bool {
         return (sender.text?.isEmpty)!
+    }
+    
+    func calculateInvestments(saldoInicial:String, aporteMensalEntrado:String, periodo:String, taxa:Double) -> Double{
+        var total:Double
+        total = Double(saldoInicial)!
+        var vezes:Int
+        vezes = Int(periodo)!
+        var aporteMensal:Double
+        aporteMensal=Double(aporteMensalEntrado)!
+        for _ in 1...vezes {
+            total = (total+aporteMensal)*taxa
+        }
+         return total
+        
     }
 }
 
