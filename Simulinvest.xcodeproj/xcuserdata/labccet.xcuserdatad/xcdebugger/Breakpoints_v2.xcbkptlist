@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simulinvest/ViewController.swift"
-            timestampString = "518572907.686151"
+            timestampString = "518575073.464709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "patati(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simulinvest/ViewController.swift"
-            timestampString = "518573198.893835"
+            timestampString = "518575220.864831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "patati(_:)"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "getValueFromTextField(textField:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

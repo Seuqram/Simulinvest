@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E214020C1EE8D0AB0057550B /* ResultadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E214020B1EE8D0AB0057550B /* ResultadosViewController.swift */; };
 		E239FCCD1EDF8F3C0085889C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239FCCC1EDF8F3C0085889C /* AppDelegate.swift */; };
 		E239FCCF1EDF8F3C0085889C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239FCCE1EDF8F3C0085889C /* ViewController.swift */; };
 		E239FCD21EDF8F3C0085889C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E239FCD01EDF8F3C0085889C /* Main.storyboard */; };
 		E239FCD41EDF8F3C0085889C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E239FCD31EDF8F3C0085889C /* Assets.xcassets */; };
 		E239FCD71EDF8F3C0085889C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E239FCD51EDF8F3C0085889C /* LaunchScreen.storyboard */; };
 		E239FCE21EDF8F3D0085889C /* SimulinvestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239FCE11EDF8F3D0085889C /* SimulinvestTests.swift */; };
-		E257B97F1EE61C0C00DED6CA /* resultadoSimulacaoFixaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257B97E1EE61C0C00DED6CA /* resultadoSimulacaoFixaViewController.swift */; };
 		E257B9861EE620F400DED6CA /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257B9851EE620F400DED6CA /* Investment.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E214020B1EE8D0AB0057550B /* ResultadosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultadosViewController.swift; sourceTree = "<group>"; };
 		E239FCC91EDF8F3C0085889C /* Simulinvest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simulinvest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E239FCCC1EDF8F3C0085889C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E239FCCE1EDF8F3C0085889C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +39,6 @@
 		E239FCDD1EDF8F3D0085889C /* SimulinvestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulinvestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E239FCE11EDF8F3D0085889C /* SimulinvestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulinvestTests.swift; sourceTree = "<group>"; };
 		E239FCE31EDF8F3D0085889C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E257B97E1EE61C0C00DED6CA /* resultadoSimulacaoFixaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultadoSimulacaoFixaViewController.swift; sourceTree = "<group>"; };
 		E257B9851EE620F400DED6CA /* Investment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Investment.swift; path = ../Investment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,10 +86,10 @@
 				E239FCCC1EDF8F3C0085889C /* AppDelegate.swift */,
 				E239FCCE1EDF8F3C0085889C /* ViewController.swift */,
 				E239FCD01EDF8F3C0085889C /* Main.storyboard */,
-				E257B97E1EE61C0C00DED6CA /* resultadoSimulacaoFixaViewController.swift */,
 				E239FCD31EDF8F3C0085889C /* Assets.xcassets */,
 				E239FCD51EDF8F3C0085889C /* LaunchScreen.storyboard */,
 				E239FCD81EDF8F3C0085889C /* Info.plist */,
+				E214020B1EE8D0AB0057550B /* ResultadosViewController.swift */,
 			);
 			path = Simulinvest;
 			sourceTree = "<group>";
@@ -217,8 +217,8 @@
 			files = (
 				E257B9861EE620F400DED6CA /* Investment.swift in Sources */,
 				E239FCCF1EDF8F3C0085889C /* ViewController.swift in Sources */,
-				E257B97F1EE61C0C00DED6CA /* resultadoSimulacaoFixaViewController.swift in Sources */,
 				E239FCCD1EDF8F3C0085889C /* AppDelegate.swift in Sources */,
+				E214020C1EE8D0AB0057550B /* ResultadosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

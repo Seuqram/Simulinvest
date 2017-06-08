@@ -16,10 +16,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var aporteMensalTextField: UITextField!
     @IBOutlet weak var periodoTextField: UITextField!
     @IBOutlet weak var periodoSegmentedControl: UISegmentedControl!
-    //var textFields : [UITextField] = [saldoInicialTextField, aporteMensalTextField]
     @IBOutlet weak var sinalization: UILabel!
-    @IBAction func simularButton(_ sender: Any) {
+    @IBOutlet weak var simularButton: UIButton!
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+    }
+    
+    @IBAction func valueChanged(_ sender: UITextField) {
+        if (saldoInicialTextField.text! != "" || aporteMensalTextField.text! != "") && (periodoTextField.text != ""){
+            simularButton.isEnabled = true
+        }else{
+            simularButton.isEnabled = false
+        }
     }
     
     @IBAction func patati(_ sender: Any) {
@@ -34,21 +44,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         if camposOK{
-            var saldoInicial = saldoInicialTextField.text!
-            if saldoInicial == ""{
-                saldoInicial = "0.0"
-            }
-            var aporteMensal = aporteMensalTextField.text!
-            if aporteMensal == ""{
-                aporteMensal = "0.0"
-            }
             var periodo = Int(periodoTextField.text!)!
             if periodoSegmentedControl.selectedSegmentIndex == 1{
                 periodo = periodo * 12
             }
+            
             let poupanca = Investment(
-                saldoInicial: Double(saldoInicial)!,
-                aporteMensal: Double(aporteMensal)!,
+                saldoInicial: getValueFromTextField(textField: saldoInicialTextField),
+                aporteMensal: getValueFromTextField(textField: aporteMensalTextField),
                 periodo: periodo,
                 taxa: 0.1)
             var b : String
@@ -117,6 +120,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let alert = UIAlertController(title: "Alert", message: mensagem, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Fechar", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func getValueFromTextField(textField: UITextField) -> Double{
+        let variavel = textField.text
+        if variavel == ""{
+            return 0.0
+        }else{
+            return Double(variavel!)!
+        }
+        
     }
 }
 
