@@ -21,7 +21,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        var periodo = Int(periodoTextField.text!)!
+        if periodoSegmentedControl.selectedSegmentIndex == 1{
+            periodo = periodo * 12
+        }
+        let poupanca = Investment(
+            saldoInicial: getValueFromTextField(textField: saldoInicialTextField),
+            aporteMensal: getValueFromTextField(textField: aporteMensalTextField),
+            periodo: periodo,
+            taxa: 0.1)
+        if let vc = segue.destination as? ResultadosViewController {
+            vc.investment = poupanca
+        }
     }
     
     @IBAction func valueChanged(_ sender: UITextField) {
