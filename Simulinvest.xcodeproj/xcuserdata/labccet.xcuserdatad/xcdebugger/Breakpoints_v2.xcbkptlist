@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Investment.swift"
-            timestampString = "518398781.39905"
+            timestampString = "518572011.361858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "init(saldoInicial:aporteMensal:periodo:tributavel:taxa:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "init(saldoInicial:aporteMensal:periodo:taxa:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,11 +26,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simulinvest/ViewController.swift"
-            timestampString = "518571423.398582"
+            timestampString = "518572907.686151"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "patati(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simulinvest/ViewController.swift"
+            timestampString = "518573198.893835"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "patati(_:)"
             landmarkType = "7">
          </BreakpointContent>

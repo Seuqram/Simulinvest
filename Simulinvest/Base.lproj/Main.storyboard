@@ -94,6 +94,7 @@
                     </view>
                     <connections>
                         <outlet property="aporteMensalTextField" destination="N11-XO-dYX" id="Jxa-0i-cxx"/>
+                        <outlet property="periodoSegmentedControl" destination="W6X-hY-Sgj" id="FYa-qd-c5S"/>
                         <outlet property="periodoTextField" destination="jra-qm-R8C" id="9S5-FA-vMh"/>
                         <outlet property="saldoInicialTextField" destination="gN9-Pg-o1X" id="8OI-C5-fTq"/>
                     </connections>

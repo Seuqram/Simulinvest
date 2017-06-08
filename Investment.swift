@@ -16,13 +16,16 @@ public class Investment {
     var taxa : Double
     var taxaTributacao : Double
     
-    public init (saldoInicial: Double, aporteMensal: Double, periodo: Int, tributavel: Bool, taxa: Double){
-        self.saldoInicial = saldoInicial
-        self.aporteMensal = aporteMensal
-        self.periodo = periodo
-        self.tributavel = tributavel
-        self.taxa = taxa
-        self.taxaTributacao = 0
+    public convenience init (saldoInicial: Double, aporteMensal: Double, periodo: Int, taxa: Double){
+        self.init(
+            saldoInicial: saldoInicial,
+            aporteMensal: aporteMensal,
+            periodo: periodo,
+            tributavel: false,
+            taxa: taxa,
+            taxaTributacao: 0
+            )
+        
     }
     
     public init (saldoInicial: Double, aporteMensal: Double, periodo: Int, tributavel: Bool, taxa: Double, taxaTributacao: Double){

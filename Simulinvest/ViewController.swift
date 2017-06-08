@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var saldoInicialTextField: UITextField!
     @IBOutlet weak var aporteMensalTextField: UITextField!
     @IBOutlet weak var periodoTextField: UITextField!
+    @IBOutlet weak var periodoSegmentedControl: UISegmentedControl!
     //var textFields : [UITextField] = [saldoInicialTextField, aporteMensalTextField]
     @IBOutlet weak var sinalization: UILabel!
     @IBAction func simularButton(_ sender: Any) {
@@ -33,11 +34,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         if camposOK{
+            var saldoInicial = saldoInicialTextField.text!
+            if saldoInicial == ""{
+                saldoInicial = "0.0"
+            }
+            var aporteMensal = aporteMensalTextField.text!
+            if aporteMensal == ""{
+                aporteMensal = "0.0"
+            }
+            var periodo = Int(periodoTextField.text!)!
+            if periodoSegmentedControl.selectedSegmentIndex == 1{
+                periodo = periodo * 12
+            }
             let poupanca = Investment(
-                saldoInicial: Double(saldoInicialTextField.text!)!,
-                aporteMensal: Double(aporteMensalTextField.text!)!,
-                periodo: Int(periodoTextField.text!)!,
-                tributavel: false,
+                saldoInicial: Double(saldoInicial)!,
+                aporteMensal: Double(aporteMensal)!,
+                periodo: periodo,
                 taxa: 0.1)
             var b : String
             b = String(format:"%f", poupanca.calculateInvestment())
