@@ -6,15 +6,14 @@
 //  Copyright © 2017 Patati. All rights reserved.
 //
 
-/*var investiments : [Investment?] = []
-investiments += [poupancaInvestment, tesouroDiretoInvestment]*/
-
 import UIKit
 
 class ResultadosViewController: UIViewController {
     
     public var poupancaInvestment : Investment?
     public var tesouroDiretoInvestment : Investment?
+    public var parcelas : [Parcela] = []
+    
 
     @IBOutlet weak var resultadoPoupancaLabel: UILabel!
     @IBOutlet weak var resultadoTesouroDiretoLabel: UILabel!
@@ -39,9 +38,22 @@ class ResultadosViewController: UIViewController {
         
     }
 
+    @IBAction func poupancaButton(_ sender: Any) {
+        if let investment = poupancaInvestment {
+            resultadoPoupancaLabel.text = String(investment.calculateInvestment())
+            parcelas = investment.parcelas
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ResultadosViewController {
+            vc.poupancaInvestment = poupanca
+            vc.tesouroDiretoInvestment = tesouroDireto
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func alerta(mensagem: String){
@@ -49,16 +61,5 @@ class ResultadosViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Fechar", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -51,5 +51,83 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simulinvest/ResultadosViewController.swift"
+            timestampString = "519178306.972217"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ResultadosViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulinvest.ResultadosViewController.poupancaInvestment.getter : Swift.Optional&lt;Simulinvest.Investment&gt;"
+                  moduleName = "Simulinvest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/labccet/Downloads/Simulinvest/Simulinvest/ResultadosViewController.swift"
+                  timestampString = "519178307.497335"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulinvest.ResultadosViewController.poupancaInvestment.setter : Swift.Optional&lt;Simulinvest.Investment&gt;"
+                  moduleName = "Simulinvest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/labccet/Downloads/Simulinvest/Simulinvest/ResultadosViewController.swift"
+                  timestampString = "519178307.499943"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulinvest.ResultadosViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Simulinvest.ResultadosViewController"
+                  moduleName = "Simulinvest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/labccet/Downloads/Simulinvest/Simulinvest/ResultadosViewController.swift"
+                  timestampString = "519178307.501128"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulinvest.ResultadosViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Simulinvest.ResultadosViewController&gt;"
+                  moduleName = "Simulinvest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/labccet/Downloads/Simulinvest/Simulinvest/ResultadosViewController.swift"
+                  timestampString = "519178307.502208"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
