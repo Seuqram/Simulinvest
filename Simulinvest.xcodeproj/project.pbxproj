@@ -14,6 +14,7 @@
 		E239FCD41EDF8F3C0085889C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E239FCD31EDF8F3C0085889C /* Assets.xcassets */; };
 		E239FCD71EDF8F3C0085889C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E239FCD51EDF8F3C0085889C /* LaunchScreen.storyboard */; };
 		E239FCE21EDF8F3D0085889C /* SimulinvestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239FCE11EDF8F3D0085889C /* SimulinvestTests.swift */; };
+		E23CEE3D1EF2023100F606C5 /* Parcela.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23CEE3C1EF2023100F606C5 /* Parcela.swift */; };
 		E257B9861EE620F400DED6CA /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257B9851EE620F400DED6CA /* Investment.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		E239FCDD1EDF8F3D0085889C /* SimulinvestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulinvestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E239FCE11EDF8F3D0085889C /* SimulinvestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulinvestTests.swift; sourceTree = "<group>"; };
 		E239FCE31EDF8F3D0085889C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E23CEE3C1EF2023100F606C5 /* Parcela.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parcela.swift; sourceTree = "<group>"; };
 		E257B9851EE620F400DED6CA /* Investment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Investment.swift; path = ../Investment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				E257B9851EE620F400DED6CA /* Investment.swift */,
+				E23CEE3C1EF2023100F606C5 /* Parcela.swift */,
 				E257B9801EE61E2700DED6CA /* Model */,
 				E239FCCC1EDF8F3C0085889C /* AppDelegate.swift */,
 				E239FCCE1EDF8F3C0085889C /* ViewController.swift */,
@@ -218,6 +221,7 @@
 				E257B9861EE620F400DED6CA /* Investment.swift in Sources */,
 				E239FCCF1EDF8F3C0085889C /* ViewController.swift in Sources */,
 				E239FCCD1EDF8F3C0085889C /* AppDelegate.swift in Sources */,
+				E23CEE3D1EF2023100F606C5 /* Parcela.swift in Sources */,
 				E214020C1EE8D0AB0057550B /* ResultadosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

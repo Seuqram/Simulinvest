@@ -30,8 +30,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
             aporteMensal: getValueFromTextField(textField: aporteMensalTextField),
             periodo: periodo,
             taxa: 0.1)
+        let tesouroDireto = Investment(
+            saldoInicial: getValueFromTextField(textField: saldoInicialTextField),
+            aporteMensal: getValueFromTextField(textField: aporteMensalTextField),
+            periodo: periodo,
+            taxa: 0.2,
+            taxaTributacao: 0.05)
         if let vc = segue.destination as? ResultadosViewController {
-            vc.investment = poupanca
+            vc.poupancaInvestment = poupanca
+            vc.tesouroDiretoInvestment = tesouroDireto
         }
     }
     
@@ -41,36 +48,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }else{
             simularButton.isEnabled = false
         }
-    }
-    
-    @IBAction func patati(_ sender: Any) {
-        var camposOK = true
-        if (isFieldEmpty(sender: saldoInicialTextField) && isFieldEmpty(sender: aporteMensalTextField)){
-            alerta(mensagem: "Preencha saldo inicial ou aporte mensal")
-            camposOK = false
-        }
-        if isFieldEmpty(sender: periodoTextField){
-            alerta(mensagem: "Preencha o período")
-            camposOK = false
-        }
-        
-        if camposOK{
-            var periodo = Int(periodoTextField.text!)!
-            if periodoSegmentedControl.selectedSegmentIndex == 1{
-                periodo = periodo * 12
-            }
-            
-            let poupanca = Investment(
-                saldoInicial: getValueFromTextField(textField: saldoInicialTextField),
-                aporteMensal: getValueFromTextField(textField: aporteMensalTextField),
-                periodo: periodo,
-                taxa: 0.1)
-            var b : String
-            b = String(format:"%f", poupanca.calculateInvestment())
-            alerta(mensagem: b)
-        }
-        
-        
     }
     
     let numberFormatter = NumberFormatter()

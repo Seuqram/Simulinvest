@@ -15,6 +15,7 @@ public class Investment {
     var tributavel : Bool
     var taxa : Double
     var taxaTributacao : Double
+    var parcelas : [Parcela]
     
     public convenience init (saldoInicial: Double, aporteMensal: Double, periodo: Int, taxa: Double){
         self.init(
@@ -28,6 +29,18 @@ public class Investment {
         
     }
     
+    public convenience init (saldoInicial: Double, aporteMensal: Double, periodo: Int, taxa: Double, taxaTributacao: Double){
+        self.init(
+            saldoInicial: saldoInicial,
+            aporteMensal: aporteMensal,
+            periodo: periodo,
+            tributavel: true,
+            taxa: taxa,
+            taxaTributacao: taxaTributacao
+        )
+        
+    }
+    
     public init (saldoInicial: Double, aporteMensal: Double, periodo: Int, tributavel: Bool, taxa: Double, taxaTributacao: Double){
         self.saldoInicial = saldoInicial
         self.aporteMensal = aporteMensal
@@ -35,9 +48,11 @@ public class Investment {
         self.tributavel = tributavel
         self.taxa = taxa
         self.taxaTributacao = taxaTributacao
+        self.parcelas = []
+        self.calculaparcelas()
     }
     
-    public func calculateInvestment() -> Double{
+    public func calculateInvestment() -> Double {
         var total = self.saldoInicial
         for _ in 1...periodo{
             total = (total + aporteMensal) * (1 + taxa)
@@ -46,5 +61,15 @@ public class Investment {
             total = total * (1 - taxaTributacao)
         }
         return total
+    }
+    
+    private func calculaparcelas(){
+        var total = self.saldoInicial
+        for indice in 1...periodo{
+            parcelas += [Parcela(saldo: total + aporteMensal,
+                                     juros: (total + aporteMensal) * taxa,
+                                     indice: indice)]
+            total = (total + aporteMensal) * (1 + taxa)
+        }
     }
 }
