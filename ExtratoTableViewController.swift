@@ -10,7 +10,7 @@ import UIKit
 
 class ExtratoTableViewController: UITableViewController {
     
-    //public var parcelas : [Parcela] = []
+    public var parcelas : [Parcela] = []
     
     var  cars = [String]()
     var newCar: String = ""
@@ -19,6 +19,7 @@ class ExtratoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        alerta(mensagem: String(parcelas.count))
         cars = ["BMW","Audi","Volkswagen"]
 
         // Uncomment the following line to preserve selection between presentations
@@ -42,7 +43,7 @@ class ExtratoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cars.count
+        return parcelas.count
     }
 
     
@@ -50,12 +51,18 @@ class ExtratoTableViewController: UITableViewController {
         //let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetail", for: indexPath)
-     
-         cell.textLabel!.text = cars[indexPath.row]
+     cell.textLabel!.text = String(parcelas[indexPath.row].juros)
+//         cell.textLabel!.text = cars[indexPath.row]
         
      return cell
 
         
+    }
+    
+    func alerta(mensagem: String){
+        let alert = UIAlertController(title: "Alert", message: mensagem, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Fechar", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 
