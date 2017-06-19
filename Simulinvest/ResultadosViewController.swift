@@ -45,12 +45,12 @@ class ResultadosViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ResultadosViewController {
-            vc.poupancaInvestment = poupanca
-            vc.tesouroDiretoInvestment = tesouroDireto
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let vc = segue.destination as? ResultadosViewController {
+//            vc.poupancaInvestment = poupanca
+//            vc.tesouroDiretoInvestment = tesouroDireto
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
