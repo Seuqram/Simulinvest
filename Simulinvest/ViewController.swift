@@ -119,5 +119,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    class func doubleToCurrency(value: Double) -> String{
+        return String(format: "R$%.02f", locale: Locale.current, arguments: [value])
+    }
 }
 

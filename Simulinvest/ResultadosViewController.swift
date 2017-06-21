@@ -22,17 +22,10 @@ class ResultadosViewController: UIViewController {
         super.viewDidLoad()
         
         if let investment = poupancaInvestment {
-            resultadoPoupancaLabel.text = String(investment.calculateInvestment())
-            var parcelas : String
-            parcelas = String(investment.parcelas[0].saldo) + "\n"
-            for indice in 1 ... (investment.periodo - 1){
-                parcelas += String(investment.parcelas[indice].saldo) + "\n"
-                
-            }
-            alerta(mensagem: parcelas)
+            resultadoPoupancaLabel.text = ViewController.doubleToCurrency(value: investment.calculateInvestment())
         }
         if let tesouroDireto = tesouroDiretoInvestment{
-            resultadoTesouroDiretoLabel.text = String(tesouroDireto.calculateInvestment())
+            resultadoTesouroDiretoLabel.text = ViewController.doubleToCurrency(value: tesouroDireto.calculateInvestment())
         }
         
         
