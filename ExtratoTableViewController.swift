@@ -10,11 +10,13 @@ import UIKit
 
 class ExtratoTableViewController: UITableViewController {
     
-    public var parcelas : [Parcela] = []
+    public var parcelas : [Parcela]?
+    var investment : Investment?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        parcelas = investment?.parcelas
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,17 +38,19 @@ class ExtratoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return parcelas.count
+        return parcelas!.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetail", for: indexPath)
-            let parcela = parcelas[indexPath.row]
-            cell.detailTextLabel!.text = ViewController.doubleToCurrency(value: parcela.saldo) + " + " + ViewController.doubleToCurrency(value: parcela.juros) + " + "
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetail", for: indexPath)
+        if let parcela = parcelas?[indexPath.row]{
+            if let investmentt = investment{
+                cell.textLabel!.text = String(parcela.indice) + "/" + String(investmentt.periodo)
+                cell.detailTextLabel!.text = ViewController.doubleToCurrency(value: ((parcela.saldo) - (investment?.aporteMensal)!)) + " + " + ViewController.doubleToCurrency(value: (investment?.aporteMensal)!) + " + " + ViewController.doubleToCurrency(value: (parcela.juros))
+            }
+        }
+        return cell
     }
     
     func alerta(mensagem: String){

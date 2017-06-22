@@ -43,9 +43,11 @@ class ResultadosViewController: UIViewController {
             if let investment = poupancaInvestment {
                 resultadoPoupancaLabel.text = String(investment.calculateInvestment())
                 parcelas = investment.parcelas
+                vc.investment = investment
             }
+            //vc.parcelas = parcelas
             
-            vc.parcelas = parcelas
+            
         }
     }
     
