@@ -44,7 +44,8 @@ class ExtratoTableViewController: UITableViewController {
         //let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetail", for: indexPath)
-            cell.textLabel!.text = String(parcelas[indexPath.row].juros)
+            let parcela = parcelas[indexPath.row]
+            cell.detailTextLabel!.text = ViewController.doubleToCurrency(value: parcela.saldo) + " + " + ViewController.doubleToCurrency(value: parcela.juros) + " + "
             return cell
     }
     
