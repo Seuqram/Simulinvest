@@ -115,7 +115,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if variavel == ""{
             return 0.0
         }else{
-            return Double(variavel!)!
+            
+            return Double((variavel?.replacingOccurrences(of: ",", with: "", options: .literal, range: nil))!)!
         }
         
     }
