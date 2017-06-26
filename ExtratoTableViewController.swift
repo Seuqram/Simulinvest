@@ -41,6 +41,9 @@ class ExtratoTableViewController: UITableViewController {
         return parcelas!.count
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "## | SALDO + APORTE + RENDIMENTO"
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetail", for: indexPath)
