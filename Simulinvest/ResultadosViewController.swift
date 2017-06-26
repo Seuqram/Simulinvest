@@ -13,6 +13,7 @@ class ResultadosViewController: UIViewController {
     public var poupancaInvestment : Investment?
     public var tesouroDiretoInvestment : Investment?
     public var parcelas : [Parcela] = []
+    public var investimento : Investment?
     
 
     @IBOutlet weak var resultadoPoupancaLabel: UILabel!
@@ -33,7 +34,6 @@ class ResultadosViewController: UIViewController {
 
     @IBAction func poupancaButton(_ sender: Any) {
         if let investment = poupancaInvestment {
-            resultadoPoupancaLabel.text = String(investment.calculateInvestment())
             parcelas = investment.parcelas
         }
     }
@@ -41,12 +41,10 @@ class ResultadosViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ExtratoTableViewController {
             if let investment = poupancaInvestment {
-                resultadoPoupancaLabel.text = String(investment.calculateInvestment())
                 parcelas = investment.parcelas
                 vc.investment = investment
             }
-            //vc.parcelas = parcelas
-            
+            //vc.investment = investimento
             
         }
     }
