@@ -15,6 +15,7 @@ class ResultadosViewController: UIViewController {
     public var parcelas : [Parcela] = []
     public var investimento : Investment?
     
+    @IBOutlet weak var poupancaButton: UIButton!
 
     @IBOutlet weak var resultadoPoupancaLabel: UILabel!
     @IBOutlet weak var resultadoTesouroDiretoLabel: UILabel!
@@ -28,6 +29,7 @@ class ResultadosViewController: UIViewController {
         if let tesouroDireto = tesouroDiretoInvestment{
             resultadoTesouroDiretoLabel.text = ViewController.doubleToCurrency(value: tesouroDireto.calculateInvestment())
         }
+        poupancaButton.tag = 1
         
         
     }
@@ -39,14 +41,24 @@ class ResultadosViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ExtratoTableViewController {
-            if let investment = poupancaInvestment {
-                parcelas = investment.parcelas
-                vc.investment = investment
+        if segue.identifier == "poupancaSegue"{
+            if let vc = segue.destination as? ExtratoTableViewController {
+                if let investment = poupancaInvestment {
+                    parcelas = investment.parcelas
+                    vc.investment = investment
+                }
             }
-            //vc.investment = investimento
-            
+        }else{
+            if let vc = segue.destination as? ExtratoTableViewController {
+                if let investment = tesouroDiretoInvestment {
+                    parcelas = investment.parcelas
+                    vc.investment = investment
+                }
+            }
         }
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

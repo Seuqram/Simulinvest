@@ -137,19 +137,23 @@
                                 <state key="normal" title="Poupança"/>
                                 <connections>
                                     <action selector="poupancaButton:" destination="TAI-bL-Zsj" eventType="touchUpInside" id="RAe-vo-e4h"/>
-                                    <segue destination="DtY-2o-8Nc" kind="show" id="HpR-gM-FQk"/>
+                                    <segue destination="DtY-2o-8Nc" kind="show" identifier="poupancaSegue" id="HpR-gM-FQk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJN-AP-SSs">
                                 <rect key="frame" x="143" y="429" width="101" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Tesouro Direto"/>
+                                <connections>
+                                    <segue destination="DtY-2o-8Nc" kind="show" identifier="tesouroDiretoSegue" id="6tw-gM-Uaz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="QvY-wP-95p"/>
                     <connections>
+                        <outlet property="poupancaButton" destination="ITc-5w-FhO" id="0bn-L7-YAp"/>
                         <outlet property="resultadoPoupancaLabel" destination="TSg-29-dAC" id="X50-bj-vg1"/>
                         <outlet property="resultadoTesouroDiretoLabel" destination="wKS-w1-rjd" id="INl-9w-Y0c"/>
                     </connections>
@@ -171,7 +175,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ghW-1L-qrb" id="a36-a7-Rri">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFill" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vpI-9Q-wiv">
@@ -221,4 +225,7 @@
             <point key="canvasLocation" x="-239.19999999999999" y="65.217391304347828"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="HpR-gM-FQk"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -29,13 +29,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
             saldoInicial: getValueFromTextField(textField: saldoInicialTextField),
             aporteMensal: getValueFromTextField(textField: aporteMensalTextField),
             periodo: periodo,
-            taxa: 0.1)
+            taxa: 0.006392)
         let tesouroDireto = Investment(
             saldoInicial: getValueFromTextField(textField: saldoInicialTextField),
             aporteMensal: getValueFromTextField(textField: aporteMensalTextField),
             periodo: periodo,
-            taxa: 0.2,
-            taxaTributacao: 0.05)
+            taxa: 0.008165,
+            taxaTributacao: 0.225)
         if let vc = segue.destination as? ResultadosViewController {
             vc.poupancaInvestment = poupanca
             vc.tesouroDiretoInvestment = tesouroDireto
@@ -59,6 +59,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         numberFormatter.numberStyle = .decimal
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.maximumFractionDigits = 2
+//        let  patati = TaxaRequest()
+//        patati.getTaxaData("String")
+//        self.alerta(mensagem: patati.patati!)
+        
     }
 
     override func didReceiveMemoryWarning() {
