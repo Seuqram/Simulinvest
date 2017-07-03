@@ -17,6 +17,7 @@
 		E23CEE3D1EF2023100F606C5 /* Parcela.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23CEE3C1EF2023100F606C5 /* Parcela.swift */; };
 		E23CEE4F1EF20EC800F606C5 /* ExtratoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23CEE4E1EF20EC800F606C5 /* ExtratoTableViewController.swift */; };
 		E257B9861EE620F400DED6CA /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E257B9851EE620F400DED6CA /* Investment.swift */; };
+		E2EF19C41F0B0451004684F4 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EF19C31F0B0451004684F4 /* ViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E23CEE3C1EF2023100F606C5 /* Parcela.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parcela.swift; sourceTree = "<group>"; };
 		E23CEE4E1EF20EC800F606C5 /* ExtratoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtratoTableViewController.swift; path = ../ExtratoTableViewController.swift; sourceTree = "<group>"; };
 		E257B9851EE620F400DED6CA /* Investment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Investment.swift; path = ../Investment.swift; sourceTree = "<group>"; };
+		E2EF19C31F0B0451004684F4 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,17 +87,12 @@
 		E239FCCB1EDF8F3C0085889C /* Simulinvest */ = {
 			isa = PBXGroup;
 			children = (
-				E257B9851EE620F400DED6CA /* Investment.swift */,
-				E23CEE3C1EF2023100F606C5 /* Parcela.swift */,
+				E2EF19C21F0B0407004684F4 /* ViewController */,
 				E257B9801EE61E2700DED6CA /* Model */,
-				E239FCCC1EDF8F3C0085889C /* AppDelegate.swift */,
-				E23CEE4E1EF20EC800F606C5 /* ExtratoTableViewController.swift */,
-				E239FCCE1EDF8F3C0085889C /* ViewController.swift */,
 				E239FCD01EDF8F3C0085889C /* Main.storyboard */,
 				E239FCD31EDF8F3C0085889C /* Assets.xcassets */,
 				E239FCD51EDF8F3C0085889C /* LaunchScreen.storyboard */,
 				E239FCD81EDF8F3C0085889C /* Info.plist */,
-				E214020B1EE8D0AB0057550B /* ResultadosViewController.swift */,
 			);
 			path = Simulinvest;
 			sourceTree = "<group>";
@@ -112,8 +109,22 @@
 		E257B9801EE61E2700DED6CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E257B9851EE620F400DED6CA /* Investment.swift */,
+				E23CEE3C1EF2023100F606C5 /* Parcela.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E2EF19C21F0B0407004684F4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E214020B1EE8D0AB0057550B /* ResultadosViewController.swift */,
+				E239FCCC1EDF8F3C0085889C /* AppDelegate.swift */,
+				E23CEE4E1EF20EC800F606C5 /* ExtratoTableViewController.swift */,
+				E239FCCE1EDF8F3C0085889C /* ViewController.swift */,
+				E2EF19C31F0B0451004684F4 /* ViewControllerExtension.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 			files = (
 				E23CEE4F1EF20EC800F606C5 /* ExtratoTableViewController.swift in Sources */,
 				E257B9861EE620F400DED6CA /* Investment.swift in Sources */,
+				E2EF19C41F0B0451004684F4 /* ViewControllerExtension.swift in Sources */,
 				E239FCCF1EDF8F3C0085889C /* ViewController.swift in Sources */,
 				E239FCCD1EDF8F3C0085889C /* AppDelegate.swift in Sources */,
 				E23CEE3D1EF2023100F606C5 /* Parcela.swift in Sources */,

@@ -58,7 +58,7 @@ public class Investment {
             total = (total + aporteMensal) * (1 + taxa)
         }
         if self.tributavel{
-            total = total * (1 - taxaTributacao)
+            //total = total * (1 - taxaTributacao)
         }
         return total
     }

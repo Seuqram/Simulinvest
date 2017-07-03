@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             aporteMensal: getValueFromTextField(textField: aporteMensalTextField),
             periodo: periodo,
             taxa: 0.008165,
-            taxaTributacao: 0.225)
+            taxaTributacao: 0.15)
         if let vc = segue.destination as? ResultadosViewController {
             vc.poupancaInvestment = poupanca
             vc.tesouroDiretoInvestment = tesouroDireto
@@ -59,9 +59,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         numberFormatter.numberStyle = .decimal
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.maximumFractionDigits = 2
-//        let  patati = TaxaRequest()
-//        patati.getTaxaData("String")
-//        self.alerta(mensagem: patati.patati!)
         
     }
 
@@ -71,14 +68,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
         var originalString = textField.text
-        
         // Replace any formatting commas
         originalString = originalString!.replacingOccurrences(of: ",", with: "")
-        
         var doubleFromString:  Double!
-        
         if originalString!.isEmpty {
             originalString = string
             doubleFromString = Double(originalString!)
@@ -96,9 +89,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 doubleFromString = Double(originalString!)
                 doubleFromString! *= 10
             }
-            
         }
-        
         let finalString = numberFormatter.string(from: doubleFromString as NSNumber)
         textField.text = finalString
         return false
@@ -108,11 +99,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return (sender.text?.isEmpty)!
     }
     
-    func alerta(mensagem: String){
-        let alert = UIAlertController(title: "Alert", message: mensagem, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Fechar", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
+    
     
     func getValueFromTextField(textField: UITextField) -> Double{
         let variavel = textField.text
@@ -122,11 +109,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             return Double((variavel?.replacingOccurrences(of: ",", with: "", options: .literal, range: nil))!)!
         }
-        
-    }
-    
-    class func doubleToCurrency(value: Double) -> String{
-        return String(format: "R$%.02f", locale: Locale.current, arguments: [value])
     }
 }
 
