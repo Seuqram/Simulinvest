@@ -15,7 +15,6 @@ class ResultadosViewController: UIViewController {
     public var parcelas : [Parcela] = []
     public var investimento : Investment?
     
-    @IBOutlet weak var poupancaButton: UIButton!
     @IBOutlet weak var resultadoPoupancaLabel: UILabel!
     @IBOutlet weak var resultadoTesouroDiretoLabel: UILabel!
     
@@ -26,13 +25,6 @@ class ResultadosViewController: UIViewController {
         }
         if let tesouroDireto = tesouroDiretoInvestment{
             resultadoTesouroDiretoLabel.text = doubleToCurrency(value: tesouroDireto.calculateInvestment())
-        }
-        poupancaButton.tag = 1
-    }
-
-    @IBAction func poupancaButton(_ sender: Any) {
-        if let investment = poupancaInvestment {
-            parcelas = investment.parcelas
         }
     }
     
